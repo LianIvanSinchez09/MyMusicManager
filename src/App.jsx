@@ -1,31 +1,28 @@
-import { useState } from 'react'
 import './App.css'
 import '../css/styles.css'
-import { Link, BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/main/secondary/Navbar'
+import Home from './pages/Home'
+import Search from './pages/Search'
+import Settings from './pages/Settings'
+import Likes from './pages/Likes'
+import Profile from './pages/Profile'
 
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  let [text, settext] = useState("hola")
-
-  const handleClick = () => {
-    setCount(count + 1);
-    settext(text == "hola" ? text = "adios" : text = "hola");
-  }
-  
+function App() {  
   return (
-    <>
       <BrowserRouter>
 
         <Navbar />
         
-
+        <Routes>
+          <Route path='/' element={ <Home/> }/>
+          <Route path='/search' element={ <Search/> }/>
+          <Route path='/settings' element={ <Settings/> }/>
+          <Route path='/likes' element={ <Likes/> }/>
+          <Route path='/profile' element={ <Profile/> }/>
+        </Routes>
       </BrowserRouter>
-    </>
-
-
   )
 }
 
