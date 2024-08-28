@@ -1,5 +1,7 @@
 export default function Likes(){
     return(
-        <h1>Hola mundo</h1>
+        <section id="main-content">
+            <h1>Hola mundo desde likes</h1>
+        </section>
     )
 }

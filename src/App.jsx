@@ -1,4 +1,3 @@
-import './App.css'
 import '../css/styles.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Navbar from './components/main/secondary/Navbar'
@@ -7,16 +6,16 @@ import Search from './pages/Search'
 import Settings from './pages/Settings'
 import Likes from './pages/Likes'
 import Profile from './pages/Profile'
+import Categories from './pages/Categories'
 
 
 function App() {  
   return (
-      <BrowserRouter>
-
-        <Navbar />
-        
+    <BrowserRouter>
+        <Navbar />        
         <Routes>
           <Route path='/' element={ <Home/> }/>
+          <Route path='/categories' element={ <Categories/> }/>
           <Route path='/search' element={ <Search/> }/>
           <Route path='/settings' element={ <Settings/> }/>
           <Route path='/likes' element={ <Likes/> }/>
